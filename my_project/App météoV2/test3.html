@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Météo</title>
+
+    <!-- Inserer fichier js -->
+    <script src="jquery.js"></script>
+    <script src="app3.js"></script>
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" 
+    integrity="sha512-Fdq8QvrEd3TD4heN8gNTOl79sAZR7zsiHIDQbE5eEBxx8pPfb/yJHaBWxhoG7SNcQiBmrrUHlg5TiNX4ovt6Jg==" crossorigin="anonymous" />
+</head>
+<body>
+    <section id="app">
+        
+        <input id="queryLoc" type="text" value="Paris">
+        <input type="button" value="Météo" onclick="buttonGetClick()">
+
+
+        <h1>
+            <span id="ville"></span>
+            <span class="tooltip">Tapez une autre ville si vous le souhaitez</span>
+        </h1>
+
+
+        <i class="wi"></i>
+        <h2>
+            <span id="temperature"></span> C°(<span id="conditions"></span>)
+        </h2>
+    </section>
+</body>
+</html>

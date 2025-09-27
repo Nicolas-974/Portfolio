@@ -1,0 +1,590 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+
+  background: linear-gradient(to right, #000000, #0d47a1);
+
+  min-height: 100vh;
+  /* margin-left: 180px; */
+
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+/* Header */
+
+header {
+  padding: 25px;
+  text-align: center;
+  margin-left: 180px;
+}
+
+/* Image P */
+.icon_profil {
+  margin-left: 55px;
+  width: 55px;
+  height: 55px;
+}
+
+main,
+section,
+footer {
+  margin-left: 180px;
+  padding: 2rem;
+}
+
+/*Partie Présentation*/
+
+.presentation {
+
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/close-up-du-hub-de-serveur-de-debogage-et-d-optimisation-de-code-professionnel-informatique.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: darken;
+
+}
+
+.presentation p {
+
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+  max-width: 800px;
+
+  margin: auto;
+  padding: 2rem;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+
+}
+
+/*Liseré - Navside bar*/
+.custom-sidebar {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  padding: 1rem;
+  z-index: 1000;
+
+}
+
+.sidebar-menu i {
+  font-size: 1rem;
+}
+
+nav>ul {
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+}
+
+.icon-size {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.sidebar-menu .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+
+#parcours,
+#projects,
+#contact {
+  text-align: center;
+  background: linear-gradient(to right, #000000, #1768e4);
+
+
+}
+
+/*Titres H1 pour chaque section*/
+#parcours h1,
+#competences h1,
+#projects h1,
+#loisirs h1,
+#contact h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #42a5f5;
+  /* bleu clair qui contraste avec ton fond */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*Barres hr*/
+#parcours hr,
+#competences hr,
+#projects hr,
+#loisirs hr,
+#contact hr {
+
+  width: 80px;
+  margin: 15px auto;
+  border: 2px solid #42a5f5;
+  border-radius: 5px;
+
+}
+
+
+/* Section compétences */
+#competences {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+
+/* Conteneur des logos */
+.competences {
+
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+
+  /*Pour le responsive*/
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+}
+
+/* Chaque bloc logo + label */
+.competences div {
+  text-align: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.competences div:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+}
+
+/* Logos */
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.15);
+}
+
+/* Titres sous les logos */
+.competences p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #fff;
+
+}
+
+/*Section Projets*/
+
+#projects {
+
+  text-align: center;
+  padding: 2rem;
+
+}
+
+.projets-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.projet {
+
+  background-color: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid #1e88e5;
+  border-radius: 10px;
+
+  padding: 1rem;
+  width: 250px;
+  min-height: 360px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  position: relative;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.projet:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.projet:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.projet:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.projet:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.projet:hover {
+
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.projet img {
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+  transition: transform 0.4s ease, filter 0.4s ease;
+
+}
+
+.projet img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.projet h3 {
+  margin-bottom: 0.5rem;
+  color: #42a5f5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.projet p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.4;
+}
+
+.image-hover {
+  position: relative;
+  width: 100%;
+  height: 125px;
+}
+
+.image-hover img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.default-img {
+  height: 100px !important;
+  opacity: 1;
+  z-index: 1;
+}
+
+.hover-img {
+  width: 75%;
+  opacity: 0;
+  z-index: 2;
+}
+
+.image-hover:hover .default-img {
+  opacity: 0;
+}
+
+.image-hover:hover .hover-img {
+  opacity: 1;
+}
+
+/*Section Loisirs*/
+
+#loisirs {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loisirs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.loisir {
+  text-align: center;
+  width: 150px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.loisir:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.loisir:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loisir:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.loisir:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.loisir:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loisir p {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #42a5f5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.img_loisirs {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.img_loisirs:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.1);
+}
+
+/* Partie Image IA */
+.loisir-large {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.loisir-large p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #42a5f5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Slider avant/après */
+.slider-container {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.img-base {
+  width: 100%;
+  display: block;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.img-overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Curseur draggable */
+.slider-handle {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: #42a5f5;
+  cursor: ew-resize;
+  z-index: 2;
+}
+
+
+.slider-handle::before {
+
+  content: "⇔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  background: #42a5f5;
+  border-radius: 50%;
+  padding: 6px;
+
+}
+
+/*Contact*/
+
+#contact {
+  text-align: center;
+}
+
+.contact_container {
+  gap: 2rem;
+}
+
+.contact_container a {
+  margin-right: 25px;
+}
+
+.footer {
+
+  background: #0d1b2a;
+
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+
+  .icon_profil {
+    margin-left: 0px;
+    width: 55px;
+    height: 55px;
+  }
+
+
+  .custom-sidebar {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    z-index: 1000;
+  }
+
+  body {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+
+  header, main, section, footer {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+
+  .sidebar-menu {
+    flex-direction: row !important;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .sidebar-menu .link-text {
+    display: none;  
+    /* masque le texte */
+  }
+
+
+  .sidebar-menu .nav-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .icon-size {
+    font-size: 1rem;
+  }
+
+
+  .projets-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loisir {
+    width: 120px;
+  }
+
+  .img_loisirs {
+    width: 120px;
+    height: 120px;
+  }
+
+  .slider-container {
+    max-width: 95%;
+  }
+
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+  }
+
+}
