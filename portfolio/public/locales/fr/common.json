@@ -1,0 +1,133 @@
+{
+  "sidebar": {
+    "home": "Accueil",
+    "parcours": "Parcours",
+    "competences": "Compétences",
+    "projets": "Projets",
+    "loisirs": "Loisirs",
+    "contact": "Contact"
+  },
+  "presentation": {
+    "greeting": "Bonjour, je me présente",
+    "description1": "Actuellement inscrit à <strong>Epitech</strong> en préparation du programme <strong>Master of Science</strong>, je suis un développeur junior passionné qui cherche à s'améliorer chaque jour dans la programmation web.",
+    "description2": "Sérieux, attentif et à l'écoute, je souhaite mettre mes compétences au service de personnes ou d'entreprises qui le désirent. N'hésitez pas à me contacter !",
+    "downloadCV": "Télécharger mon CV",
+    "contactMe": "Me contacter",
+    "scroll": "Scroll"
+  },
+  "parcours": {
+    "subtitle": "Mon histoire",
+    "title": "Parcours",
+    "titleAccent": "Professionnel",
+    "inProgress": "en cours",
+    "entries": {
+      "epitech": { "description": "Programme Master of Science — en cours" },
+      "afpar2021": { "description": "Formation \"Développeur Web et Web Mobile\"" },
+      "afpar2019": { "description": "Formation \"Digital Codeur\"" },
+      "simplon": { "description": "Certification \"Coder et déployer une application web simple\"" },
+      "univ2016": { "description": "L1 Sciences de la Nature et de la Vie (SNV)" },
+      "univ2015": { "description": "L1 Biologie Chimie Géosciences (BCG)" },
+      "lycee": { "description": "Baccalauréat Général — Série Scientifique" }
+    }
+  },
+  "competences": {
+    "subtitle": "Mon stack",
+    "title": "Technologies",
+    "titleAccent": "Découvertes",
+    "filters": {
+      "tous": "Tous",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "frameworks": "Frameworks",
+      "outils": "Outils"
+    },
+    "count_one": "{{count}} technologie",
+    "count_other": "{{count}} technologies"
+  },
+  "projets": {
+    "subtitle": "Ce que j'ai réalisé",
+    "title": "Mes",
+    "titleAccent": "Projets",
+    "filters": {
+      "tous": "Tous",
+      "epitech": "Epitech",
+      "personnel": "Personnel",
+      "exercice": "Exercice"
+    },
+    "seeProject": "Voir le projet",
+    "count_one": "{{count}} projet",
+    "count_other": "{{count}} projets",
+    "items": {
+      "2dgame":        "Projet Epitech. Réalisation d'un jeu Yugioh en 2D avec Java.",
+      "jobboard":      "Projet Epitech. Réalisation d'un site Job Board.",
+      "fategenesis":   "Projet personnel. Traduction d'une fanfiction (ENG → FR) + interactivité dans les chapitres.",
+      "hangman":       "Exercice de programmation Python — premier projet Epitech.",
+      "versetdujour":  "Projet personnel. Sélection aléatoire d'un verset de la Bible via des données JSON.",
+      "exercicehtml":  "Exercice final du cours \"Apprenez à créer votre site web avec HTML5 et CSS3\" — OpenClassroom.",
+      "appmeteo":      "Application météo avec appel à une API externe.",
+      "pgm02":         "Exercice de programmation JavaScript."
+    }
+  },
+  "loisirs": {
+    "subtitle": "En dehors du code",
+    "title": "Mes",
+    "titleAccent": "Loisirs",
+    "hobbies": {
+      "anime": "Anime / Manga",
+      "gaming": "Gaming",
+      "film": "Film",
+      "musique": "Musique",
+      "lecture": "Lecture",
+      "ecriture": "Écriture"
+    },
+    "writing": {
+      "label": "Écriture",
+      "description": "Passionné d'écriture créative, je publie des fanfictions sur FanFiction.net. Retrouvez mes histoires et univers imaginaires sur mon profil.",
+      "seeProfile": "Voir mon profil"
+    },
+    "slider": {
+      "subtitle": "Expérimentation",
+      "title": "Génération d'image",
+      "titleAccent": "par IA",
+      "hint": "Glisser pour comparer",
+      "labelAI": "IA",
+      "labelPhoto": "Photo"
+    }
+  },
+  "contact": {
+    "subtitle": "Travaillons ensemble",
+    "title": "Me",
+    "titleAccent": "Contacter",
+    "tagline": "Un projet ? Une question ?",
+    "description": "N'hésitez pas à me contacter via le formulaire ou directement sur l'un de mes réseaux. Je réponds généralement sous 24h.",
+    "location": "La Réunion, France",
+    "school": "Epitech — Master of Science",
+    "findMe": "Retrouvez-moi sur",
+    "form": {
+      "lastname": "Nom",
+      "firstname": "Prénom",
+      "lastnamePlaceholder": "Votre nom",
+      "firstnamePlaceholder": "Votre prénom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Objet de votre message",
+      "message": "Message",
+      "messagePlaceholder": "Votre message...",
+      "send": "Envoyer le message",
+      "sending": "Envoi...",
+      "sending_status": "Envoi en cours...",
+      "success": "Merci ! Votre message a bien été envoyé.",
+      "error_connection": "Oups ! Problème de connexion.",
+      "error_generic": "Oups ! Il y a eu un problème lors de l'envoi."
+    }
+  },
+  "footer": "© 2026 Nicolas Law-Shun — Réalisé avec Next.js & React",
+  "widget": {
+    "theme": "Thème",
+    "language": "Langue",
+    "theme_blue": "Bleu",
+    "theme_purple": "Violet",
+    "theme_teal": "Teal"
+  }
+}

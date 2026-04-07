@@ -1,0 +1,38 @@
+/*Lien police AlexBrush-Regular */
+@font-face{
+    font-family: 'AlexBrush-Regular';
+
+        src: url('AlexBrush-Regular.eot') format('eot'),
+             url('AlexBrush-Regular.woff') format('woff'),
+             url('AlexBrush-Regular.ttf') format('truetype'),
+             url('AlexBrush-Regular.svg') format('svg');
+    }
+
+ /*Toute la balise body est aligner au centre, coloré en blanc, et à une image de fond */   
+body{
+    text-align: center;
+    background-image: url("wallpaper.png");
+    color: white;
+}
+
+/*Titre h1 en police Alexbrush-Regular */
+h1{
+    font-family: 'AlexBrush-Regular';
+}
+
+/*Paragraphe en taille 1.6em et en police AlexBrush-Regular */
+p{
+    font-family: 'AlexBrush-Regular';
+    font-size: 1.6em;
+}
+
+/*Titres h2 couleur bleu, et encadré en blanc */
+h2{
+    color:#2698FF;
+    border: 3px white solid;
+}
+
+/*Ombre image */
+img{
+    box-shadow: 6px 6px 3px gray;
+}

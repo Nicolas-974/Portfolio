@@ -1,0 +1,75 @@
+/*Lien police AlexBrush-Regular */
+@font-face{
+    font-family: 'AlexBrush-Regular';
+
+        src: url('AlexBrush-Regular.eot') format('eot'),
+             url('AlexBrush-Regular.woff') format('woff'),
+             url('AlexBrush-Regular.ttf') format('truetype'),
+             url('AlexBrush-Regular.svg') format('svg');
+    }
+
+html{
+    height: 100%;
+}
+
+/*Toute la balise body est aligner au centre, coloré en blanc, et à une image de fond */  
+body{
+    text-align: center;
+    background-image: url("wallpaper.png");
+    color: white;
+    min-height: 100%;
+    display: flex;
+}
+
+/*Titre h1 en police Alexbrush-Regular */
+h1{
+    font-family: 'AlexBrush-Regular';
+}
+
+/*Paragraphe en taille 1.6em et en police AlexBrush-Regular */
+p{
+    font-family: 'AlexBrush-Regular';
+    font-size: 1.6em;
+}
+
+/*Titres h2 couleur bleu, et encadré en blanc */
+h2{
+    color:#2698FF;
+    border: 3px white solid;
+    text-align: center;
+}
+
+/*Ombre image */
+img{
+    box-shadow: 6px 6px 3px gray;
+}
+
+/*Réalisation du liseré */
+.liseré{
+    float: left;
+	width:180px;
+    min-height:100% ;
+    background-color:#E15239;
+}
+
+/*Div corps pour bien le séparer de la div liseré */
+#corps{
+    flex: 2;
+}
+
+/*Div conteneur qui contient les 3 sections et qui sont alignés */
+#conteneur{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+
+}
+
+/*Dimension des 3 div: "zone" */
+.zone{
+    width: 400px;
+    height: 300px;
+}
+
+

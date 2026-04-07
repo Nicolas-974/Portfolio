@@ -1,0 +1,82 @@
+.clear
+{
+    background-image: url(https://images.freeimages.com/images/large-previews/e62/clear-sky-1363026.jpg);
+}
+
+
+.clouds
+{
+    background-image: url(https://poulpitablog.files.wordpress.com/2013/11/gris_dans_le_ciel_by_noematique.png);
+}
+
+.rain
+{
+    background-image: url(http://www.truth-seeker.info/wp-content/uploads/2015/05/rain-by-design.jpg);
+    
+}
+
+.snow
+{
+    background-image: url(https://www.wildtextures.com/wp-content/uploads/2011/09/snow-sample.jpg);
+}
+
+.drizzle
+{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/53/ToileBruine27.jpg);
+}
+
+body
+{
+    font-family: 'Trebuchet MS';
+    text-align: center;
+
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-size: cover;
+}
+
+i.wi
+{
+    font-size: 5em;
+    line-height: 3em;
+}
+
+h2
+{
+    font-size: 2em;
+}
+
+
+h1
+{
+    font-size: 3em;
+    position: relative;
+}
+
+.tooltip
+{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    transition: opacity .3s, top .5s;
+}
+
+h1:hover .tooltip
+{
+    top: -50PX;
+    opacity: 1;
+}

@@ -1,0 +1,24 @@
+body{
+    background-image: url("wallpaper.png");
+    background-size: contain;
+}
+
+#conteneur{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+
+}
+
+.zone{
+    width: 600px;
+    height: auto;
+}
+
+.liseré{
+    
+    display: none;
+}

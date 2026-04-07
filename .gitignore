@@ -1,0 +1,29 @@
+# ── Claude Code ──────────────────────────────
+.claude/
+CLAUDE.md
+
+# ── Captures d'écran ─────────────────────────
+screenshots/
+
+# ── Next.js ──────────────────────────────────
+portfolio/.next/
+portfolio/out/
+portfolio/node_modules/
+
+# ── Variables d'environnement ─────────────────
+portfolio/.env
+portfolio/.env.local
+portfolio/.env.*.local
+
+# ── Logs ─────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── OS ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editeurs ─────────────────────────────────
+.vscode/
+.idea/
+*.swp

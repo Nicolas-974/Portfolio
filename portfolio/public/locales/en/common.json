@@ -1,0 +1,133 @@
+{
+  "sidebar": {
+    "home": "Home",
+    "parcours": "Background",
+    "competences": "Skills",
+    "projets": "Projects",
+    "loisirs": "Hobbies",
+    "contact": "Contact"
+  },
+  "presentation": {
+    "greeting": "Hi, let me introduce myself",
+    "description1": "Currently enrolled at <strong>Epitech</strong> in the <strong>Master of Science</strong> program, I am a passionate junior developer who strives to improve every day in web programming.",
+    "description2": "Serious, attentive and a good listener, I want to put my skills at the service of people or companies who need them. Feel free to contact me!",
+    "downloadCV": "Download my CV",
+    "contactMe": "Contact me",
+    "scroll": "Scroll"
+  },
+  "parcours": {
+    "subtitle": "My story",
+    "title": "Professional",
+    "titleAccent": "Background",
+    "inProgress": "in progress",
+    "entries": {
+      "epitech": { "description": "Master of Science program — in progress" },
+      "afpar2021": { "description": "Training \"Web and Mobile Web Developer\"" },
+      "afpar2019": { "description": "Training \"Digital Coder\"" },
+      "simplon": { "description": "Certificate \"Code and deploy a simple web application\"" },
+      "univ2016": { "description": "1st year — Natural and Life Sciences" },
+      "univ2015": { "description": "1st year — Biology Chemistry Geosciences" },
+      "lycee": { "description": "French Baccalaureate — Scientific Series" }
+    }
+  },
+  "competences": {
+    "subtitle": "My stack",
+    "title": "Technologies",
+    "titleAccent": "Discovered",
+    "filters": {
+      "tous": "All",
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "frameworks": "Frameworks",
+      "outils": "Tools"
+    },
+    "count_one": "{{count}} technology",
+    "count_other": "{{count}} technologies"
+  },
+  "projets": {
+    "subtitle": "What I've built",
+    "title": "My",
+    "titleAccent": "Projects",
+    "filters": {
+      "tous": "All",
+      "epitech": "Epitech",
+      "personnel": "Personal",
+      "exercice": "Exercise"
+    },
+    "seeProject": "See project",
+    "count_one": "{{count}} project",
+    "count_other": "{{count}} projects",
+    "items": {
+      "2dgame":        "Epitech project. A 2D Yu-Gi-Oh card game built with Java.",
+      "jobboard":      "Epitech project. Development of a Job Board website.",
+      "fategenesis":   "Personal project. Translation of a fanfiction (ENG → FR) with interactive chapters.",
+      "hangman":       "Python programming exercise — first Epitech project.",
+      "versetdujour":  "Personal project. Random selection of a Bible verse using JSON data.",
+      "exercicehtml":  "Final exercise from the course \"Learn to create your website with HTML5 and CSS3\" — OpenClassroom.",
+      "appmeteo":      "Weather app with calls to an external API.",
+      "pgm02":         "JavaScript programming exercise."
+    }
+  },
+  "loisirs": {
+    "subtitle": "Outside of coding",
+    "title": "My",
+    "titleAccent": "Hobbies",
+    "hobbies": {
+      "anime": "Anime / Manga",
+      "gaming": "Gaming",
+      "film": "Movies",
+      "musique": "Music",
+      "lecture": "Reading",
+      "ecriture": "Writing"
+    },
+    "writing": {
+      "label": "Writing",
+      "description": "Passionate about creative writing, I publish fanfictions on FanFiction.net. Find my stories and imaginary universes on my profile.",
+      "seeProfile": "See my profile"
+    },
+    "slider": {
+      "subtitle": "Experiment",
+      "title": "AI-generated",
+      "titleAccent": "image",
+      "hint": "Drag to compare",
+      "labelAI": "AI",
+      "labelPhoto": "Photo"
+    }
+  },
+  "contact": {
+    "subtitle": "Let's work together",
+    "title": "Contact",
+    "titleAccent": "Me",
+    "tagline": "A project? A question?",
+    "description": "Feel free to contact me via the form or directly on one of my networks. I usually respond within 24 hours.",
+    "location": "Réunion Island, France",
+    "school": "Epitech — Master of Science",
+    "findMe": "Find me on",
+    "form": {
+      "lastname": "Last name",
+      "firstname": "First name",
+      "lastnamePlaceholder": "Your last name",
+      "firstnamePlaceholder": "Your first name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "send": "Send message",
+      "sending": "Sending...",
+      "sending_status": "Sending...",
+      "success": "Thank you! Your message has been sent.",
+      "error_connection": "Oops! Connection problem.",
+      "error_generic": "Oops! There was a problem sending your message."
+    }
+  },
+  "footer": "© 2026 Nicolas Law-Shun — Built with Next.js & React",
+  "widget": {
+    "theme": "Theme",
+    "language": "Language",
+    "theme_blue": "Blue",
+    "theme_purple": "Purple",
+    "theme_teal": "Teal"
+  }
+}
