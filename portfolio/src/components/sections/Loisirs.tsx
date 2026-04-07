@@ -44,7 +44,7 @@ function HobbyCard({ hobby }: { hobby: typeof hobbies[0] }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={hobby.src}
-          alt={hobby.label}
+          alt={t(hobby.labelKey)}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
