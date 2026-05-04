@@ -21,4 +21,5 @@ export const technologies: Technology[] = [
   { name: 'i18next',    logo: '/img/inext_logo_icon_170002.svg',     categories: ['framework'] },
   { name: 'Linux',      logo: '/img/Tux.svg',                        categories: ['outil'] },
   { name: 'GitHub',     logo: '/img/Octicons-mark-github.svg',       categories: ['outil'] },
+  { name: 'Docker',     logo: '/img/docker-svgrepo-com.svg',         categories: ['outil'] },
 ];

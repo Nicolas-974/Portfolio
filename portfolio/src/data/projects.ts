@@ -13,6 +13,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'RTC',
+    descKey: 'projets.items.rtc',
+    image: '/img/whatsup.png',
+    imageStyle: 'cover',
+    tags: ['React', 'Rust', 'MongoDB', 'Docker', 'PostgreSQL'],
+    types: ['epitech'],
+    link: 'https://github.com/Nicolas-974/whats-up',
+  },
+  {
     title: '2D GAME',
     descKey: 'projets.items.2dgame',
     image: '/img/logo.png',

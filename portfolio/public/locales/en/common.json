@@ -65,7 +65,8 @@
       "versetdujour":  "Personal project. Random selection of a Bible verse using JSON data.",
       "exercicehtml":  "Final exercise from the course \"Learn to create your website with HTML5 and CSS3\" — OpenClassroom.",
       "appmeteo":      "Weather app with calls to an external API.",
-      "pgm02":         "JavaScript programming exercise."
+      "pgm02":         "JavaScript programming exercise.",
+      "rtc":           "Epitech project. Real-time chat application built with WebSocket and Node.js."
     }
   },
   "loisirs": {

@@ -74,20 +74,32 @@ export default function Presentation() {
           </div>
 
           {/* Badges */}
-          <div className="flex flex-wrap justify-center gap-2 mt-2">
-            {['Epitech', 'Master of Science', 'Développeur Web'].map((label) => (
-              <span
-                key={label}
-                className="px-3 py-1 text-xs font-semibold rounded-full"
-                style={{
-                  background:  `${colors.accent}18`,
-                  border:      `1px solid ${colors.accent}35`,
-                  color:       colors.accent,
-                }}
-              >
-                {label}
-              </span>
-            ))}
+          <div className="flex flex-col items-center gap-1.5 mt-2">
+            <div className="flex gap-2">
+              {['Epitech', 'Master of Science', 'Développeur Web'].map((label) => (
+                <span
+                  key={label}
+                  className="px-3 py-1 text-xs font-semibold rounded-full"
+                  style={{
+                    background:  `${colors.accent}18`,
+                    border:      `1px solid ${colors.accent}35`,
+                    color:       colors.accent,
+                  }}
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
+            <span
+              className="px-3 py-1 text-xs font-semibold rounded-full"
+              style={{
+                background:  `${colors.accent}18`,
+                border:      `1px solid ${colors.accent}35`,
+                color:       colors.accent,
+              }}
+            >
+              Développeur Fullstack
+            </span>
           </div>
         </div>
 
