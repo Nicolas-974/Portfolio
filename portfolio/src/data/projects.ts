@@ -13,6 +13,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Alice Bookworm',
+    descKey: 'projets.items.alicebookworm',
+    image: '/img/bookworm.jpg',
+    imageStyle: 'cover',
+    tags: ['Python', 'NLP', 'spaCy'],
+    types: ['epitech'],
+    link: 'https://github.com/Nicolas-974/alice_bookworm',
+  },
+  {
     title: 'RTC',
     descKey: 'projets.items.rtc',
     image: '/img/whatsup.png',

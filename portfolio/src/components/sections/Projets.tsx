@@ -148,12 +148,15 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
   );
 }
 
+const PROJECTS_PER_PAGE = 6;
+
 export default function Projets() {
   const { t }                     = useTranslation();
   const { colors }                = useTheme();
   const [active, setActive]       = useState<ProjectType>('tous');
   const [visible, setVisible]     = useState(true);
   const [displayed, setDisplayed] = useState(projects);
+  const [page, setPage]           = useState(1);
   const pendingRef                = useRef<ProjectType>('tous');
 
   const filters = [
@@ -175,11 +178,15 @@ export default function Projets() {
         const next = pendingRef.current;
         setDisplayed(next === 'tous' ? projects : projects.filter((p) => p.types.includes(next)));
         setActive(next);
+        setPage(1);
         setVisible(true);
       }, 200);
       return () => clearTimeout(timeout);
     }
   }, [visible]);
+
+  const totalPages = Math.ceil(displayed.length / PROJECTS_PER_PAGE);
+  const paginated   = displayed.slice((page - 1) * PROJECTS_PER_PAGE, page * PROJECTS_PER_PAGE);
 
   // Couleur dominante : premier type non-'tous' du premier projet affiché, sinon filtre actif
   const accentColor = typeColor[active];
@@ -243,10 +250,51 @@ export default function Projets() {
             transition: 'opacity 0.2s ease, transform 0.2s ease',
           }}
         >
-          {displayed.map((project) => (
+          {paginated.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-10">
+            <button
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className="w-9 h-9 flex items-center justify-center rounded-full border text-sm transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              style={{ borderColor: `${accentColor}50`, color: accentColor }}
+              aria-label={t('projets.pagination.prev')}
+            >
+              <i className="bi bi-chevron-left" />
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                onClick={() => setPage(n)}
+                className="w-9 h-9 flex items-center justify-center rounded-full border text-sm font-semibold transition-all duration-200 cursor-pointer"
+                style={
+                  page === n
+                    ? { background: accentColor, color: '#0a0f1e', borderColor: accentColor, boxShadow: `0 0 16px ${accentColor}60` }
+                    : { background: 'transparent', color: accentColor, borderColor: `${accentColor}50` }
+                }
+                aria-current={page === n ? 'page' : undefined}
+              >
+                {n}
+              </button>
+            ))}
+
+            <button
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className="w-9 h-9 flex items-center justify-center rounded-full border text-sm transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              style={{ borderColor: `${accentColor}50`, color: accentColor }}
+              aria-label={t('projets.pagination.next')}
+            >
+              <i className="bi bi-chevron-right" />
+            </button>
+          </div>
+        )}
 
         <p className="text-center text-slate-500 text-xs mt-6">
           {t('projets.count', { count: displayed.length })}

@@ -57,6 +57,10 @@
     "seeProject": "See project",
     "count_one": "{{count}} project",
     "count_other": "{{count}} projects",
+    "pagination": {
+      "prev": "Previous page",
+      "next": "Next page"
+    },
     "items": {
       "2dgame":        "Epitech project. A 2D Yu-Gi-Oh card game built with Java.",
       "jobboard":      "Epitech project. Development of a Job Board website.",
@@ -66,7 +70,8 @@
       "exercicehtml":  "Final exercise from the course \"Learn to create your website with HTML5 and CSS3\" — OpenClassroom.",
       "appmeteo":      "Weather app with calls to an external API.",
       "pgm02":         "JavaScript programming exercise.",
-      "rtc":           "Epitech project. Real-time chat application built with WebSocket and Node.js."
+      "rtc":           "Epitech project. Real-time chat application built with WebSocket and Node.js.",
+      "alicebookworm": "Epitech project. CLI tool for book analysis (NLP): topic modeling, summarization, named entity recognition, lexical diversity, and book similarity."
     }
   },
   "loisirs": {
