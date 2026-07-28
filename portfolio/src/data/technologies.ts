@@ -22,4 +22,5 @@ export const technologies: Technology[] = [
   { name: 'Linux',      logo: '/img/Tux.svg',                        categories: ['outil'] },
   { name: 'GitHub',     logo: '/img/Octicons-mark-github.svg',       categories: ['outil'] },
   { name: 'Docker',     logo: '/img/docker-svgrepo-com.svg',         categories: ['outil'] },
+  { name: 'Vite',       logo: '/img/Vitejs-logo.svg',                categories: ['outil'] },
 ];

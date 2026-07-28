@@ -148,7 +148,9 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
   );
 }
 
-const PROJECTS_PER_PAGE = 6;
+const MOBILE_BREAKPOINT   = 640; // Tailwind `sm`
+const MOBILE_PER_PAGE     = 3;
+const DESKTOP_PER_PAGE    = 6;
 
 export default function Projets() {
   const { t }                     = useTranslation();
@@ -157,7 +159,20 @@ export default function Projets() {
   const [visible, setVisible]     = useState(true);
   const [displayed, setDisplayed] = useState(projects);
   const [page, setPage]           = useState(1);
+  const [perPage, setPerPage]     = useState(DESKTOP_PER_PAGE);
   const pendingRef                = useRef<ProjectType>('tous');
+
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
+    const update = () => setPerPage(mq.matches ? MOBILE_PER_PAGE : DESKTOP_PER_PAGE);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    setPage(1);
+  }, [perPage]);
 
   const filters = [
     { value: 'tous'      as ProjectType, color: '#60a5fa', label: t('projets.filters.tous')      },
@@ -185,8 +200,8 @@ export default function Projets() {
     }
   }, [visible]);
 
-  const totalPages = Math.ceil(displayed.length / PROJECTS_PER_PAGE);
-  const paginated   = displayed.slice((page - 1) * PROJECTS_PER_PAGE, page * PROJECTS_PER_PAGE);
+  const totalPages = Math.ceil(displayed.length / perPage);
+  const paginated   = displayed.slice((page - 1) * perPage, page * perPage);
 
   // Couleur dominante : premier type non-'tous' du premier projet affiché, sinon filtre actif
   const accentColor = typeColor[active];

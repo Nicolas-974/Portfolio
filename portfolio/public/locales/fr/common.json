@@ -42,7 +42,11 @@
       "outils": "Outils"
     },
     "count_one": "{{count}} technologie",
-    "count_other": "{{count}} technologies"
+    "count_other": "{{count}} technologies",
+    "pagination": {
+      "prev": "Page précédente",
+      "next": "Page suivante"
+    }
   },
   "projets": {
     "subtitle": "Ce que j'ai réalisé",
@@ -71,7 +75,8 @@
       "appmeteo":      "Application météo avec appel à une API externe.",
       "pgm02":         "Exercice de programmation JavaScript.",
       "rtc":           "Projet Epitech. Application de messagerie en temps réel (Real Time Chat) avec WebSocket et Node.js.",
-      "alicebookworm": "Projet Epitech. Outil CLI d'analyse de livres (NLP) : thèmes, résumé, entités nommées, diversité lexicale et similarité entre ouvrages."
+      "alicebookworm": "Projet Epitech. Outil CLI d'analyse de livres (NLP) : thèmes, résumé, entités nommées, diversité lexicale et similarité entre ouvrages.",
+      "coindesfanfics": "Projet personnel. Site de lecture de fanfictions traduites en français, avec ambiances sonores, thèmes visuels par univers et bascule FR/EN."
     }
   },
   "loisirs": {

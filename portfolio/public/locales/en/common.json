@@ -42,7 +42,11 @@
       "outils": "Tools"
     },
     "count_one": "{{count}} technology",
-    "count_other": "{{count}} technologies"
+    "count_other": "{{count}} technologies",
+    "pagination": {
+      "prev": "Previous page",
+      "next": "Next page"
+    }
   },
   "projets": {
     "subtitle": "What I've built",
@@ -71,7 +75,8 @@
       "appmeteo":      "Weather app with calls to an external API.",
       "pgm02":         "JavaScript programming exercise.",
       "rtc":           "Epitech project. Real-time chat application built with WebSocket and Node.js.",
-      "alicebookworm": "Epitech project. CLI tool for book analysis (NLP): topic modeling, summarization, named entity recognition, lexical diversity, and book similarity."
+      "alicebookworm": "Epitech project. CLI tool for book analysis (NLP): topic modeling, summarization, named entity recognition, lexical diversity, and book similarity.",
+      "coindesfanfics": "Personal project. A reading site for fanfictions translated into French, with ambient sound, per-universe visual themes, and FR/EN switching."
     }
   },
   "loisirs": {

@@ -13,6 +13,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Le Coin des Fanfics',
+    descKey: 'projets.items.coindesfanfics',
+    image: '/img/coin-des-fanfics.png',
+    imageStyle: 'contain',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vite', 'i18next'],
+    types: ['personnel'],
+    link: 'https://le-coin-des-fanfics.vercel.app',
+  },
+  {
     title: 'Alice Bookworm',
     descKey: 'projets.items.alicebookworm',
     image: '/img/bookworm.jpg',

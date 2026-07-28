@@ -21,13 +21,31 @@ const categoryColor: Record<Category | 'tous', string> = {
   'outil':     '#a78bfa',
 };
 
+const MOBILE_BREAKPOINT = 640; // Tailwind `sm`
+const MOBILE_PER_PAGE   = 12;
+const DESKTOP_PER_PAGE  = 15;
+
 export default function Competences() {
   const { t }                     = useTranslation();
   const { colors }                = useTheme();
   const [active, setActive]       = useState<Category | 'tous'>('tous');
   const [visible, setVisible]     = useState(true);
   const [displayed, setDisplayed] = useState<typeof technologies>(technologies);
+  const [page, setPage]           = useState(1);
+  const [perPage, setPerPage]     = useState(DESKTOP_PER_PAGE);
   const pendingRef                = useRef<Category | 'tous'>('tous');
+
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
+    const update = () => setPerPage(mq.matches ? MOBILE_PER_PAGE : DESKTOP_PER_PAGE);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    setPage(1);
+  }, [perPage]);
 
   const filters = filterValues.map((f) => ({
     ...f,
@@ -52,11 +70,15 @@ export default function Competences() {
             : technologies.filter((t) => t.categories.includes(next as Category))
         );
         setActive(next);
+        setPage(1);
         setVisible(true);
       }, 200);
       return () => clearTimeout(timeout);
     }
   }, [visible]);
+
+  const totalPages = Math.ceil(displayed.length / perPage);
+  const paginated   = displayed.slice((page - 1) * perPage, page * perPage);
 
   return (
     <section
@@ -117,7 +139,7 @@ export default function Competences() {
             transition: 'opacity 0.2s ease, transform 0.2s ease',
           }}
         >
-          {displayed.map((tech) => (
+          {paginated.map((tech) => (
             <div
               key={tech.name}
               className="group flex flex-col items-center gap-3 p-4 rounded-2xl border transition-all duration-300 cursor-default"
@@ -150,6 +172,47 @@ export default function Competences() {
             </div>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-10">
+            <button
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className="w-9 h-9 flex items-center justify-center rounded-full border text-sm transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              style={{ borderColor: `${accentColor}50`, color: accentColor }}
+              aria-label={t('competences.pagination.prev')}
+            >
+              <i className="bi bi-chevron-left" />
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                onClick={() => setPage(n)}
+                className="w-9 h-9 flex items-center justify-center rounded-full border text-sm font-semibold transition-all duration-200 cursor-pointer"
+                style={
+                  page === n
+                    ? { background: accentColor, color: '#0a0f1e', borderColor: accentColor, boxShadow: `0 0 16px ${accentColor}60` }
+                    : { background: 'transparent', color: accentColor, borderColor: `${accentColor}50` }
+                }
+                aria-current={page === n ? 'page' : undefined}
+              >
+                {n}
+              </button>
+            ))}
+
+            <button
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className="w-9 h-9 flex items-center justify-center rounded-full border text-sm transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              style={{ borderColor: `${accentColor}50`, color: accentColor }}
+              aria-label={t('competences.pagination.next')}
+            >
+              <i className="bi bi-chevron-right" />
+            </button>
+          </div>
+        )}
 
         {/* Compteur */}
         <p className="text-center text-slate-500 text-xs mt-6">
